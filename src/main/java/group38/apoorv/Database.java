@@ -17,7 +17,11 @@ class Database {
     private static final String DB_URL = "jdbc:mysql://localhost:3306/ship_booking";
 
     // User Credentials
+<<<<<<< HEAD
     private static final String USER = "username";
+=======
+    private static final String USER = "database-username";
+>>>>>>> 2b5de68 (Respected sir, we could not submit zip file so we pushed it here)
     private static final String PASS = "password";
 
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
@@ -34,8 +38,15 @@ class Database {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
+<<<<<<< HEAD
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
+=======
+            // LOGGER.log(Level.INFO ,"Connecting to database..." );
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            // LOGGER.log(Level.INFO ,"Creating statement..." );
+>>>>>>> 2b5de68 (Respected sir, we could not submit zip file so we pushed it here)
             stmt = conn.createStatement();
             rs = stmt.executeQuery(Query);
 
@@ -51,6 +62,10 @@ class Database {
                 resultList.add(row);
             }
 
+<<<<<<< HEAD
+=======
+            // LOGGER.log(Level.INFO ,"Cleaning environment" );
+>>>>>>> 2b5de68 (Respected sir, we could not submit zip file so we pushed it here)
             rs.close();
             stmt.close();
             conn.close();
@@ -87,11 +102,22 @@ class Database {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
+<<<<<<< HEAD
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             stmt = conn.createStatement();
             rs = stmt.executeUpdate(Query);
 
+=======
+            // LOGGER.log(Level.INFO ,"Connecting to database..." );
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            // LOGGER.log(Level.INFO ,"Creating statement..." );
+            stmt = conn.createStatement();
+            rs = stmt.executeUpdate(Query);
+
+            // LOGGER.log(Level.INFO ,"Cleaning environment" );
+>>>>>>> 2b5de68 (Respected sir, we could not submit zip file so we pushed it here)
             stmt.close();
             conn.close();
         } catch (Exception e) {
